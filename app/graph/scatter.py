@@ -28,8 +28,8 @@ class Scatter(object):
         self.XY: np.ndarray = XY
         self.S : np.ndarray = S
         
-        self.p_alpha        : float = 0.8
-        self.p_edgecolor    : str   = "k"
+        self.p_alpha        : float = 1
+        self.p_edgecolor    : str   = "#292929"
     
         self.color_list     : list[str] = ["#3CC9B0", "#C9633C", "#C9C63C", "#783CC9"]
 
@@ -47,13 +47,13 @@ class Scatter(object):
                 print("need more color in self.color_list")
                 exit()
             
-    def scatter_graph(self, ax: Axes, fig: Figure, title: str) -> None:
+    def scatter_graph(self, ax: Axes, fig: Figure, title: str, alpha: float = 1) -> None:
         """
         Creates the Scatter plot
         """
         theme_romuro(ax, fig, None, None, title)
         ax.scatter(
-            self.XY[:, 0], self.XY[:, 1], c=self.new_s, alpha=self.p_alpha, edgecolors=self.p_edgecolor
+            self.XY[:, 0], self.XY[:, 1], c=self.new_s, alpha=alpha, edgecolors=self.p_edgecolor
         )
         ax.set_title(title)
         

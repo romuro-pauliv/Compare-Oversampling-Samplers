@@ -1,7 +1,7 @@
 from matplotlib.axes    import Axes
 from matplotlib.figure  import Figure
 
-MEDIUM_DARK : str = "#191919"
+MEDIUM_DARK : str = "#212020"
 MEDIUM_WHITE: str = "#D9D9D9"
 
 def theme_romuro(ax: Axes, fig: Figure, xl: str, yl: str, t: str) -> None:
